@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Форма ввода</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <form class="decor" action="/cgi-bin/form.py">
+            <div class="form-left-decoration"></div>
+            <div class="form-right-decoration"></div>
+            <div class="circle"></div>
+            <div class="form-inner">
+                <h3>Сделать заказ</h3>
+                <input type="text" placeholder="ФИО" name="Fio" />
+                <input type="email" placeholder="email" name="Email" />
+                <select name="Product">
+                    <option value="1">Windows 10</option>
+                    <option value="2">Kaspersky</option>
+                    <option value="3">Nord 32</option>
+                    <option value="4">Word 2020</option>
+                </select>
+                <select name="Services">
+                    <option value="1">Установить ПО</option>
+                    <option value="2">Установить ОС</option>
+                </select>
+                <input type="submit" value="Отправить" />
+            </div>
+        </form>
+        <form class="decor" action="/cgi-bin/xmlInput.py">
+            <div class="form-left-decoration"></div>
+            <div class="form-right-decoration"></div>
+            <div class="circle"></div>
+            <div class="form-inner">
+                <h3>Ввести через xml файл</h3>
+                <input type="file" name="xmlFile" />
+                <input type="submit" value="Отправить" />
+                <div class="but">
+                    <a href="http://127.0.0.1:8000/cgi-bin/orders.py"
+                        >Вывести всех заказчиков</a
+                    >
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
